@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Create Activity";
+}
+@model Activity
+<h1>Create Activity</h1>
+<form asp-asp-action="Create" method="post">
+    <input asp-for="Name" class="form-control" placeholder="Activity">
+    <input asp-for="Date" type="datetime-local" class="form-control" placeholder="Date">
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form>

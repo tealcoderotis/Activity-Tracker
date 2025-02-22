@@ -1,8 +1,21 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model IEnumerable<Activity>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Activty</td>
+            <td>Date</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Activity activty in Model) {
+            <tr>
+                <td>@activty.Name</td>
+                <td>@activty.Date.ToString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
